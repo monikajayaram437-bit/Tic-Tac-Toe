@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Tic-Tac-Toe</title>
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<header>
+    <h1>Tic-Tac-Toe</h1>
+    <p>Two Player Game</p>
+</header>
+
+<main>
+
+    <!-- Player Information -->
+    <section class="player-section">
+
+        <form id="player-form">
+
+            <div>
+                <label for="player1">Player X Name</label>
+                <input
+                    type="text"
+                    id="player1"
+                    placeholder="Enter Player X name"
+                    required
+                >
+            </div>
+
+            <div>
+                <label for="player2">Player O Name</label>
+                <input
+                    type="text"
+                    id="player2"
+                    placeholder="Enter Player O name"
+                    required
+                >
+            </div>
+
+            <div>
+                <label for="starting-player">Starting Player</label>
+
+                <select id="starting-player">
+                    <option value="X">Player X</option>
+                    <option value="O">Player O</option>
+                </select>
+            </div>
+
+            <button type="submit">Start Game</button>
+
+        </form>
+
+    </section>
+
+
+    <!-- Game Status -->
+    <section class="game-section">
+
+        <h2 id="status">Enter player names to start</h2>
+
+        <!-- Tic Tac Toe Board -->
+        <div class="board" id="board">
+
+            <button class="cell" data-index="0"></button>
+            <button class="cell" data-index="1"></button>
+            <button class="cell" data-index="2"></button>
+
+            <button class="cell" data-index="3"></button>
+            <button class="cell" data-index="4"></button>
+            <button class="cell" data-index="5"></button>
+
+            <button class="cell" data-index="6"></button>
+            <button class="cell" data-index="7"></button>
+            <button class="cell" data-index="8"></button>
+
+        </div>
+
+        <button id="restart-btn">Restart Game</button>
+
+    </section>
+
+
+    <!-- Scoreboard -->
+    <section class="score-section">
+
+        <h2>Scoreboard</h2>
+
+        <table>
+
+            <thead>
+                <tr>
+                    <th>Player</th>
+                    <th>Symbol</th>
+                    <th>Score</th>
+                </tr>
+            </thead>
+
+            <tbody>
+
+                <tr>
+                    <td id="player1-display">Player X</td>
+                    <td>X</td>
+                    <td id="score-x">0</td>
+                </tr>
+
+                <tr>
+                    <td id="player2-display">Player O</td>
+                    <td>O</td>
+                    <td id="score-o">0</td>
+                </tr>
+
+            </tbody>
+
+        </table>
+
+    </section>
+
+</main>
+
+<script src="script.js"></script>
+
+</body>
+</html>

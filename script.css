@@ -1,0 +1,183 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f4f4;
+    color: #222;
+    min-height: 100vh;
+}
+
+/* Header */
+
+header {
+    text-align: center;
+    padding: 25px 10px;
+    background: #222;
+    color: white;
+}
+
+header h1 {
+    margin-bottom: 8px;
+}
+
+
+/* Main */
+
+main {
+    width: 90%;
+    max-width: 700px;
+    margin: 30px auto;
+}
+
+
+/* Sections */
+
+section {
+    background: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+
+/* Form */
+
+#player-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#player-form div {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+label {
+    font-weight: bold;
+}
+
+input,
+select {
+    padding: 10px;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+input:focus,
+select:focus {
+    outline: 2px solid #555;
+}
+
+
+/* Buttons */
+
+button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    background: #333;
+    color: white;
+}
+
+button:hover {
+    background: #555;
+}
+
+button:focus {
+    outline: 2px solid #000;
+}
+
+
+/* Game */
+
+.game-section {
+    text-align: center;
+}
+
+#status {
+    margin-bottom: 20px;
+}
+
+
+/* Board - CSS Grid */
+
+.board {
+    width: min(90vw, 360px);
+    aspect-ratio: 1 / 1;
+    margin: 0 auto 20px;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 5px;
+
+    background: #222;
+}
+
+.cell {
+    background: white;
+    color: #222;
+    border-radius: 0;
+
+    font-size: clamp(35px, 10vw, 70px);
+    font-weight: bold;
+}
+
+.cell:hover {
+    background: #eee;
+}
+
+
+/* Scoreboard */
+
+.score-section {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+th,
+td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+}
+
+
+/* Mobile Responsive Design */
+
+@media (max-width: 600px) {
+
+    main {
+        width: 95%;
+        margin: 15px auto;
+    }
+
+    section {
+        padding: 15px;
+    }
+
+    header h1 {
+        font-size: 28px;
+    }
+
+    .board {
+        width: min(90vw, 320px);
+    }
+
+    button {
+        font-size: 14px;
+    }
+}
